@@ -1,4 +1,4 @@
-package com.example.geekflix.api
+package com.example.geekflix.detailsFilme
 
 import com.example.geekflix.model.Filme
 

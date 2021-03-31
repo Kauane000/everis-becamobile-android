@@ -6,7 +6,7 @@ import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.geekflix.api.FilmesClickListner
+import com.example.geekflix.detailsFilme.FilmesClickListner
 import com.example.geekflix.R
 import com.example.geekflix.api.*
 import com.example.geekflix.detailsFilme.DetalhesFilmesActivity

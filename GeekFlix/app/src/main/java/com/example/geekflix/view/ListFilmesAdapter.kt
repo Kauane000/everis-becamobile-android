@@ -9,6 +9,7 @@ import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.geekflix.model.Filme
 import com.example.geekflix.R
+import com.example.geekflix.detailsFilme.FilmesClickListner
 import com.squareup.picasso.Picasso
 
 class ListFilmesAdapter(private val list: List<Filme>, private val listener: MainActivity) :
@@ -20,7 +21,7 @@ class ListFilmesAdapter(private val list: List<Filme>, private val listener: Mai
 
             .inflate(R.layout.item_filme, parent, false)
 
-        return ListFilmesAdapterViewHolder(View, list as MutableList<Filme>)
+        return ListFilmesAdapterViewHolder(View, list as MutableList<Filme>, listener)
     }
 
     override fun onBindViewHolder(holder: ListFilmesAdapterViewHolder, position: Int) {
@@ -35,6 +36,7 @@ class ListFilmesAdapter(private val list: List<Filme>, private val listener: Mai
     class ListFilmesAdapterViewHolder(
         itemView: View,
         var list: MutableList<Filme>,
+        var listener: FilmesClickListner
     ) : RecyclerView.ViewHolder(itemView) {
         private val listTitle: AppCompatTextView = itemView.findViewById(R.id.titulo_filme)
         private val imagem: AppCompatImageView = itemView.findViewById(R.id.imagem_filme)
@@ -42,6 +44,10 @@ class ListFilmesAdapter(private val list: List<Filme>, private val listener: Mai
 
 
         fun bind(filme: Filme) {
+
+            itemView.setOnClickListener {
+                listener.ClickFilmes(filme)
+            }
 
             Picasso.get().load("https://image.tmdb.org/t/p/w500${filme.poster_path}").into(imagem)
             if (filme.original_title != null) {
