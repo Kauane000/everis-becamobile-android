@@ -1,6 +1,8 @@
 package com.example.geekflix.model
 
 
+import android.os.Parcel
+import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
 
 
@@ -11,4 +13,37 @@ data class Filme(
     @SerializedName("overview") var overview: String?,
     @SerializedName("id") var id_filme: String?,
     @SerializedName("release_date") var release_date: String?
-)
+) : Parcelable {
+    constructor(parcel: Parcel) : this(
+        parcel.readString(),
+        parcel.readString(),
+        parcel.readString(),
+        parcel.readString(),
+        parcel.readString(),
+        parcel.readString()
+    ) {
+    }
+
+    override fun writeToParcel(parcel: Parcel, flags: Int) {
+        parcel.writeString(original_name)
+        parcel.writeString(poster_path)
+        parcel.writeString(original_title)
+        parcel.writeString(overview)
+        parcel.writeString(id_filme)
+        parcel.writeString(release_date)
+    }
+
+    override fun describeContents(): Int {
+        return 0
+    }
+
+    companion object CREATOR : Parcelable.Creator<Filme> {
+        override fun createFromParcel(parcel: Parcel): Filme {
+            return Filme(parcel)
+        }
+
+        override fun newArray(size: Int): Array<Filme?> {
+            return arrayOfNulls(size)
+        }
+    }
+}

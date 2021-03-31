@@ -7,10 +7,9 @@ import androidx.appcompat.widget.AppCompatImageView
 import androidx.appcompat.widget.AppCompatTextView
 import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.geekflix.R
 import com.example.geekflix.model.Filme
+import com.example.geekflix.R
 import com.squareup.picasso.Picasso
-
 
 class ListFilmesAdapter(private val list: List<Filme>, private val listener: MainActivity) :
     RecyclerView.Adapter<ListFilmesAdapter.ListFilmesAdapterViewHolder>() {
@@ -18,7 +17,9 @@ class ListFilmesAdapter(private val list: List<Filme>, private val listener: Mai
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ListFilmesAdapterViewHolder {
         val View = LayoutInflater.from(parent.context)
+
             .inflate(R.layout.item_filme, parent, false)
+
         return ListFilmesAdapterViewHolder(View, list as MutableList<Filme>)
     }
 
@@ -41,6 +42,7 @@ class ListFilmesAdapter(private val list: List<Filme>, private val listener: Mai
 
 
         fun bind(filme: Filme) {
+
             Picasso.get().load("https://image.tmdb.org/t/p/w500${filme.poster_path}").into(imagem)
             if (filme.original_title != null) {
                 listTitle.text = filme.original_title
@@ -49,9 +51,13 @@ class ListFilmesAdapter(private val list: List<Filme>, private val listener: Mai
 
             }
 
+
         }
 
+
     }
+
+
 }
 
 
