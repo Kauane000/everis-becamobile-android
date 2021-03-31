@@ -1,5 +1,6 @@
 package com.example.geekflix.view
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.activity.viewModels
@@ -8,6 +9,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.geekflix.api.FilmesClickListner
 import com.example.geekflix.R
 import com.example.geekflix.api.*
+import com.example.geekflix.detailsFilme.DetalhesFilmesActivity
 import com.example.geekflix.model.Filme
 import com.example.geekflix.model.FilmesTask
 import kotlinx.android.synthetic.main.activity_main.*
@@ -33,7 +35,9 @@ class MainActivity : AppCompatActivity(), FilmesClickListner {
     }
 
     override fun ClickFilmes(filme: Filme) {
-        TODO("Not yet implemented")
+        var intent = Intent(this, DetalhesFilmesActivity::class.java)
+        intent.putExtra("filme",filme)
+        startActivity(intent)
     }
 
 
