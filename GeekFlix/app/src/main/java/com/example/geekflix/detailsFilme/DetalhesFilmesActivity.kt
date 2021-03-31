@@ -42,7 +42,9 @@ class DetalhesFilmesActivity : AppCompatActivity() {
                         placeholder(R.drawable.ic_launcher_background)
                         fallback(R.drawable.ic_launcher_background)
                     }
-                    detalhes.text = response.body()?.original_title
+                    detalhesNome.text = response.body()?.original_title
+                    detalhesResume.text = response.body()?.overview
+                    detalhesData.text = response.body()?.release_date
                 }
             }
 

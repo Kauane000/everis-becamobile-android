@@ -5,29 +5,66 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="16dp"
+    android:layout_margin="0dp"
     app:cardCornerRadius="10dp">
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/imagem_filme_detalhes"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        tools:src="@tools:sample/avatars"
-        app:layout_constraintDimensionRatio="15:8"
-        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/pink"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintDimensionRatio="14:17"
         app:layout_constraintEnd_toEndOf="parent"
-        />
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        tools:src="@tools:sample/avatars" />
 
     <TextView
-        android:id="@+id/detalhes"
+        android:id="@+id/detalhesNome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@id/imagem_filme_detalhes"
         app:layout_constraintEnd_toEndOf="parent"
-        tools:text="Titulo do Filmes"/>
-    "/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.826"
+        tools:text="Titulo do Filmes" />
+
+    <TextView
+        android:id="@+id/detalhesResume"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@id/imagem_filme_detalhes"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.963"
+        tools:text="Titulo do Filmes" />
+
+    <TextView
+        android:id="@+id/detalhesData"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@id/imagem_filme_detalhes"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.963"
+        tools:text="Titulo do Filmes" />
+
+
+
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

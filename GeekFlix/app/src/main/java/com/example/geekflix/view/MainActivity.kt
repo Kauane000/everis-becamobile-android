@@ -12,6 +12,7 @@ import com.example.geekflix.api.*
 import com.example.geekflix.detailsFilme.DetalhesFilmesActivity
 import com.example.geekflix.model.Filme
 import com.example.geekflix.model.FilmesTask
+import com.example.geekflix.viewModel.MainViewModel
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.activity_main.view.*
 import kotlinx.android.synthetic.main.layout_tela_inicial.*

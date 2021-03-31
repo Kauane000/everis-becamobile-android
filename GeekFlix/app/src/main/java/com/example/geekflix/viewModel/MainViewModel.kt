@@ -1,4 +1,4 @@
-package com.example.geekflix.view
+package com.example.geekflix.viewModel
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
