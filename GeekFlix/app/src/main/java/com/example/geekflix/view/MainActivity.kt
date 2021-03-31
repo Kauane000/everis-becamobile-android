@@ -1,7 +1,8 @@
-package com.example.geekflix
+package com.example.geekflix.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.geekflix.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
