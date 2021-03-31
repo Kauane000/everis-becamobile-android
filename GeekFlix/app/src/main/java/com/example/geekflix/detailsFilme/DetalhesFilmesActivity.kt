@@ -14,10 +14,6 @@ class DetalhesFilmesActivity : AppCompatActivity() {
 
     private var itemId: String? = ""
 
-    companion object {
-        const val id = "id"
-    }
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_detalhes_filmes)
@@ -36,8 +32,7 @@ class DetalhesFilmesActivity : AppCompatActivity() {
     }
 
     private fun bindViews() {
-        val call = RestApi.retrofitApi()
-            .getAllListDetales(itemId.toString(), "579dbbdd2de6dd3cc42c4d65dc3afdae")
+        val call = RestApi.retrofitApi().getAllListDetales(itemId.toString(), "579dbbdd2de6dd3cc42c4d65dc3afdae")
         call.enqueue(object : retrofit2.Callback<Filme> {
             override fun onResponse(call: Call<Filme>, response: Response<Filme>) {
                 if (response.isSuccessful) {
@@ -57,7 +52,5 @@ class DetalhesFilmesActivity : AppCompatActivity() {
 
         })
     }
-
-
 }
 
