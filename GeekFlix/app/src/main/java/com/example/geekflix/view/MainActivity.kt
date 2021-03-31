@@ -1,12 +1,11 @@
 package com.example.geekflix.view
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.geekflix.FilmesClickListner
+import com.example.geekflix.api.FilmesClickListner
 import com.example.geekflix.R
 import com.example.geekflix.api.*
 import com.example.geekflix.model.Filme
