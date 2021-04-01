@@ -44,7 +44,6 @@ class DetalhesFilmesActivity : AppCompatActivity() {
                     }
                     detalhesNome.text = response.body()?.original_title
                     detalhesResume.text = response.body()?.overview
-                    detalhesData.text = response.body()?.release_date
                 }
             }
 

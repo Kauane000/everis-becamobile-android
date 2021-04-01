@@ -20,6 +20,7 @@ import kotlinx.android.synthetic.main.layout_tela_inicial.*
 
 class MainActivity : AppCompatActivity(), FilmesClickListner {
     override fun onCreate(savedInstanceState: Bundle?) {
+        setSupportActionBar(findViewById(R.id.toolbar))
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         val viewModel: MainViewModel by viewModels()
