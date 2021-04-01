@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_gravity="center_horizontal"
-    android:background="@color/ciano"
+    android:background="@drawable/detalhes_fundo"
     android:orientation="horizontal">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -13,12 +13,15 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_margin="16dp"
-        android:background="@color/pink">
+        android:background="@drawable/imagem_fundo"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="43dp">
 
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/imagem_filme_detalhes"
             android:layout_width="match_parent"
             android:layout_height="0dp"
+            android:layout_marginTop="40dp"
             app:layout_constraintDimensionRatio="16:9"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -27,58 +30,47 @@
 
         <TextView
             android:id="@+id/detalhesNome"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:gravity="center"
             android:text="Titulo:"
             android:textSize="30sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="@+id/detalhesResume"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imagem_filme_detalhes" />
-
-        <TextView
-            android:id="@+id/detalhesResume"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
-            android:layout_marginBottom="15dp"
-            android:textSize="20sp"
-            app:layout_constraintBottom_toTopOf="@+id/detalhesLinguage"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/detalhesNome"
-            tools:text="Teste" />
-
-        <TextView
-            android:id="@+id/detalhesLinguage"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:text="Overview:"
-            android:textSize="30sp"
-            android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@+id/detalhesData"
-            app:layout_constraintLeft_toLeftOf="@id/detalhesData"
-            app:layout_constraintTop_toBottomOf="@+id/detalhesNome" />
 
         <TextView
             android:id="@+id/detalhesData"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@id/detalhesNome"
+            app:layout_constraintLeft_toLeftOf="@id/detalhesResume"
+            app:layout_constraintTop_toBottomOf="parent"
+            tools:text="Teste" />
+
+        <TextView
+            android:id="@+id/detalhesResume"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/detalhesLinguage"
+            app:layout_constraintTop_toBottomOf="@+id/detalhesNome"
             tools:text="Teste" />
 
         <ProgressBar
             android:id="@+id/progress_bar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            android:visibility="gone"/>
+            app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
