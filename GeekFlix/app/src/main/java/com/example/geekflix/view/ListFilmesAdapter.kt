@@ -5,7 +5,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.widget.AppCompatImageView
 import androidx.appcompat.widget.AppCompatTextView
-import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.geekflix.model.Filme
 import com.example.geekflix.R
@@ -40,7 +39,7 @@ class ListFilmesAdapter(private val list: List<Filme>, private val listener: Mai
     ) : RecyclerView.ViewHolder(itemView) {
         private val listTitle: AppCompatTextView = itemView.findViewById(R.id.titulo_filme)
         private val imagem: AppCompatImageView = itemView.findViewById(R.id.imagem_filme)
-        private val card: CardView = itemView.findViewById(R.id.cardImagem)
+        private val nota: AppCompatTextView = itemView.findViewById(R.id.nota)
 
 
         fun bind(filme: Filme) {
@@ -55,6 +54,8 @@ class ListFilmesAdapter(private val list: List<Filme>, private val listener: Mai
             } else if (filme.original_name != null) {
                 listTitle.text = filme.original_name
 
+            }else if(filme.popularity != null){
+                listTitle.text = filme.popularity
             }
 
 

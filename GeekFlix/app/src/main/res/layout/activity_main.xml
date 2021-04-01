@@ -8,6 +8,7 @@
     android:background="@color/ciano">
 
 
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerList"
         android:layout_width="0dp"

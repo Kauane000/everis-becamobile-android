@@ -12,9 +12,11 @@ data class Filme(
     @SerializedName("original_title") var original_title: String?,
     @SerializedName("overview") var overview: String?,
     @SerializedName("id") var id_filme: String?,
-    @SerializedName("release_date") var release_date: String?
+    @SerializedName("release_date") var release_date: String?,
+    @SerializedName("popularity") var popularity: String?
 ) : Parcelable {
     constructor(parcel: Parcel) : this(
+        parcel.readString(),
         parcel.readString(),
         parcel.readString(),
         parcel.readString(),
@@ -31,6 +33,7 @@ data class Filme(
         parcel.writeString(overview)
         parcel.writeString(id_filme)
         parcel.writeString(release_date)
+        parcel.writeString(popularity)
     }
 
     override fun describeContents(): Int {

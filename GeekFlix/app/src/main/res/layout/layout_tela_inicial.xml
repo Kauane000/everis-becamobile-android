@@ -7,6 +7,8 @@
     android:background="@color/ciano">
 
 
+
+
     <androidx.recyclerview.widget.RecyclerView
         android:background="@color/pink"
         android:id="@+id/lista_filmes"

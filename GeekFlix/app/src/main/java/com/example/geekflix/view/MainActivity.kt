@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.lifecycle.Observer
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.geekflix.detailsFilme.FilmesClickListner
 import com.example.geekflix.R
@@ -32,7 +33,7 @@ class MainActivity : AppCompatActivity(), FilmesClickListner {
 
 
     private fun setAdapeter(filmesTask: FilmesTask?) {
-        recyclerList.layoutManager = LinearLayoutManager(this@MainActivity)
+        recyclerList.layoutManager = GridLayoutManager(this@MainActivity, 2)
         recyclerList.adapter = filmesTask?.let { ListFilmesAdapter(it.returnList,this) }
     }
 
