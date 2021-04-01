@@ -27,7 +27,7 @@
             android:id="@+id/imagem_filme_detalhes"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="45dp"
             app:layout_constraintDimensionRatio="16:9"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -42,34 +42,35 @@
             android:text="Titulo:"
             android:textSize="30sp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="@+id/detalhesResume"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/imagem_filme_detalhes" />
 
         <TextView
             android:id="@+id/detalhesData"
+            android:layout_marginTop="20dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="76dp"
-            android:layout_marginRight="76dp"
+            android:layout_marginEnd="60dp"
+            android:layout_marginRight="60dp"
             android:textSize="20sp"
             app:layout_constraintBottom_toTopOf="@id/detalhesNome"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintLeft_toLeftOf="@id/detalhesResume"
             app:layout_constraintTop_toBottomOf="parent"
-            app:layout_constraintVertical_bias="0.455"
+            app:layout_constraintVertical_bias="0.816"
             tools:text="Teste" />
 
         <TextView
             android:id="@+id/detalhesResume"
+            android:layout_marginTop="40dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/detalhesNome"
+            app:layout_constraintStart_toStartOf="@id/detalhesNome"
+            app:layout_constraintTop_toBottomOf="@+id/detalhesData"
             tools:text="Teste" />
 
         <ProgressBar
