@@ -8,6 +8,7 @@
     android:background="@drawable/detalhes_fundo"
     android:orientation="horizontal">
 
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/descricao"
         android:layout_width="match_parent"
