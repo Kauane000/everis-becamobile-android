@@ -1,18 +1,7 @@
 # Avaliação Beca Mobile Android
 
-Criar um aplicativo que realize a listagem de filmes que são tendências da semana. Quando o usuário selecionar um filme o aplicativo deve direciona-lo para uma segunda tela e exibir o título, capa, rating e sinopse. 
-
-A listagem de filmes deve ser consultada na API https://developers.themoviedb.org/3/getting-started/introduction ao se cadastrar você receberá uma chave de acesso que deve ser usada nas requisições. 
-
-- Requisição para listar as tendências https://developers.themoviedb.org/3/trending/get-trending
-- Requisição para listar os detalhes https://developers.themoviedb.org/3/movies/get-movie-details
-
-Faça um fork deste projeto e quando finalizar a implementação faça um pull request na descrição informe qual a abordagem que você utilizou para chegar na solução descreva também quais foram os maiores desafios para concluir a avaliação.
-
-As bibliotecas abaixo podem ajuda-lo a lidar com alguns desafios deste projeto.
-
-- Biblioteca para carregamento de imagens https://github.com/square/picasso
-- Biblioteca para requisições http https://github.com/square/retrofit
+Dentro da arquitetura do projeto procurei usar como base as aulas do Bootcamp Dio, a documentações do Picasso, Retrofit e Coil para auxiliar o uso destas implementações. Procurei aplicar o conceito de ViewModel para organizar o código com distição de elementos regra de negocio e views sendo a ultilização básica de alguns conceitos de MVVM. Assim também como obejto de estudo foi aplicado a documentação da linguagem Kotlin.
+O desenvolvimento foi estruturado de forma simples, com desafios em contextos como a aplicação ro retrofit para uso da chamda da api, porém a documentação foi de total importância para a realização desta tarefa, também destacando o trafego de um objeto filme de uma activity para outra, assim em meus commits adicionei alguns testes de debug que verificavam se o conteúdo esperado era recebido na minha Main (detalhes). Ao fim o projeto na pratica foi crucial para o uso de Apis.
 
 
 
